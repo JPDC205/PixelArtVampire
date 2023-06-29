@@ -25,4 +25,5 @@ public class PlayerController : MonoBehaviour
     public void move(Vector2 d){
         mov.setDirection(d);
     }
+
 }

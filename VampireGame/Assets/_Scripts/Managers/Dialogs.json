@@ -1,0 +1,20 @@
+{
+        "npcs":[
+            {
+                "id": "0",
+                "Name": "Jhon Smith",
+                "dialogs": [
+                    {
+                        "id": "001",
+                        "Line" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec neque hendrerit, gravida neque at, elementum odio. Curabitur egestas tellus.",
+                        "nextDialog": "002"
+                    },
+                    {
+                        "id": "002",
+                        "Line" : "Lorem ipsum dolor sit amed, consectetur adipiscing elit. In nec neque hendrerit, gravida neque at, elementum odio. Curabitur egestas tellus.",
+                        "nextDialog": "STOP"
+                    }
+                ]
+            }
+        ]
+}

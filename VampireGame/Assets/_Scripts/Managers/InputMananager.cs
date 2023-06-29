@@ -22,8 +22,6 @@ public class InputMananager : MonoBehaviour
         //WASD direction
         Vector2 direction = new Vector2( Mathf.RoundToInt(Input.GetAxis("Horizontal")), Mathf.RoundToInt(Input.GetAxis("Vertical")));
 
-        if(direction.magnitude > 0)
-            Debug.Log(direction);
         pc.move(direction);
 
         if(Input.GetKeyDown(KeyCode.W)){
@@ -52,6 +50,17 @@ public class InputMananager : MonoBehaviour
         //F and E
         if(Input.GetKeyDown(KeyCode.F)){
             Debug.Log("F Pressed");
+            Interactable interactable = null;
+            
+            foreach(Interactable i in FindObjectsOfType<Interactable>()){
+                if(i.inInteractionRange){
+                    interactable = i;
+                    break;
+                }
+            }
+
+            if(interactable != null)
+                interactable.interact();
         }
         if(Input.GetKeyDown(KeyCode.E)){
             Debug.Log("E Pressed");
